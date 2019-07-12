@@ -1,0 +1,26 @@
+type Employee {
+id: Int
+name: String
+emailAddress: String
+}
+
+
+input EmployeeModel {
+id: Int
+name: String
+emailAddress: String
+}
+
+type Query{
+employees: [Employee]
+}
+
+type Mutation{
+createEmployee(input: EmployeeModel) : Employee
+deleteEmployee(id: Int) : Boolean
+}
+
+schema {
+query: Query
+mutation: Mutation
+}

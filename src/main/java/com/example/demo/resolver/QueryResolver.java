@@ -24,5 +24,10 @@ public class QueryResolver implements GraphQLQueryResolver {
     	System.out.println("getEmployees Invoked");
         return employeeRespository.findAll();
     }
+    
+    public Employee getEmployee(int id) {
+    	System.out.println("getEmployee Invoked for id " + id);
+    	return employeeRespository.findOne(id);
+	}
 
 }

@@ -13,6 +13,7 @@ emailAddress: String
 
 type Query{
 employees: [Employee]
+employee(id: Int) : Employee
 }
 
 type Mutation{

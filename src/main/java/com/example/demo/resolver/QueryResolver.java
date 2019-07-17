@@ -1,14 +1,12 @@
 package com.example.demo.resolver;
 
-import java.util.List;
-
+import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+import com.example.demo.entity.Employee;
+import com.example.demo.respository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
-import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.example.demo.entity.Employee;
-import com.example.demo.respository.EmployeeRespository;
+import java.util.List;
 
 @Component
 public class QueryResolver implements GraphQLQueryResolver {
@@ -16,18 +14,18 @@ public class QueryResolver implements GraphQLQueryResolver {
 	public QueryResolver() {
 		System.out.println("QueryResolver Intialised");
 	}
+
 	@Autowired
-    private EmployeeRespository employeeRespository;
-  
+    private EmployeeRepository employeeRepository;
 
     public List<Employee> getEmployees() {
     	System.out.println("getEmployees Invoked");
-        return employeeRespository.findAll();
+        return employeeRepository.findAll();
     }
     
     public Employee getEmployee(int id) {
     	System.out.println("getEmployee Invoked for id " + id);
-    	return employeeRespository.findOne(id);
+    	return employeeRepository.findOne(id);
 	}
 
 }

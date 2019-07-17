@@ -1,14 +1,28 @@
+type Address {
+id: Int
+city: String
+stateName: String
+country: String
+pincode: String
+}
+
+
 type Employee {
 id: Int
 name: String
 emailAddress: String
+address: Address
 }
 
 
-input EmployeeModel {
+input EmployeeInfoModel {
 id: Int
 name: String
 emailAddress: String
+city: String
+stateName: String
+country: String
+pincode: String
 }
 
 type Query{
@@ -17,7 +31,7 @@ employee(id: Int) : Employee
 }
 
 type Mutation{
-createEmployee(input: EmployeeModel) : Employee
+createEmployee(input: EmployeeInfoModel) : Employee
 deleteEmployee(id: Int) : Boolean
 }
 

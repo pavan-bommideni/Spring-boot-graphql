@@ -1,17 +1,18 @@
 package com.example.demo.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "Employee")
 public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
 	private String emailAddress;
+	@OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+	@JoinColumn(name = "ADDRESS_ID")
+	private Address address;
 	
 	public Employee() {
 		
@@ -21,6 +22,13 @@ public class Employee {
 		this.id = id;
 		this.name = name;
 		this.emailAddress = emailAddress;
+	}
+
+	public Employee(int id,String name,String emailAddress, Address address) {
+		this.id = id;
+		this.name = name;
+		this.emailAddress = emailAddress;
+		this.address = address;
 	}
 	
 	public int getId() {
@@ -43,8 +51,13 @@ public class Employee {
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
 	}
-	
-	
-	
 
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 }

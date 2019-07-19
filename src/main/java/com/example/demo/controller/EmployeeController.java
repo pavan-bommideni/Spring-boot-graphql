@@ -9,10 +9,9 @@ public class EmployeeController {
 	
 	@GetMapping("/test")
 	public String getMessage(){
+
 	return "Hello Testing Divya Done !";
-	
-	}
-	
+	}	
 
 
 }

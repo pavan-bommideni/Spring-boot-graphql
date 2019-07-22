@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/api")
 public class EmployeeController {
 	
-	@GetMapping("/test")
+	@GetMapping("/test1")
 	public String getMessage(){
-	return "Hello Amigos 123 !";	
+	return "Hello Amigo 1 !";	
 	}
 }
+
+

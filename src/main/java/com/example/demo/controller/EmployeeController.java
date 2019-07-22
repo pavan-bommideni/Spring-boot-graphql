@@ -13,6 +13,10 @@ public class EmployeeController {
 	public String getMessage(){
 	return "Hello Amigo 1 !";	
 	}
+
+@GetMapping("/test2")
+	public String getMessage(){
+	return "Hello Amigo 2 !";	
+	}
+
 }
-
-

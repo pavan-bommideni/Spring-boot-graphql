@@ -14,8 +14,8 @@ public class EmployeeController {
 	return "Hello Amigo 1 !";	
 	}
 
-@GetMapping("/test2")
-	public String getMessage(){
+	@GetMapping("/test2")
+	public String getMessage1(){
 	return "Hello Amigo 2 !";	
 	}
 

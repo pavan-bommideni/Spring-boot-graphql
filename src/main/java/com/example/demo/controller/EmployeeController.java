@@ -14,5 +14,9 @@ public class EmployeeController {
 	return "Hello Amigo 1 !";	
 	}
 
+@GetMapping("/user2")
+	public String getMessage2(){
+	return "Hello Amigo 2 !";	
+	}
 
 }

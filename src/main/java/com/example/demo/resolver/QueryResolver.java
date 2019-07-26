@@ -37,5 +37,15 @@ public class QueryResolver implements GraphQLQueryResolver {
     	System.out.println("getEmployeesCount Invoked");
     	return employeeRepository.count();
     }
+    
+    public List<Employee> getEmployeesByPinCode(String pincode){
+    	System.out.println("getEmployeeByPinCode Invoked for " + pincode);
+    	return employeeRepository.findByAddressPincode(pincode);
+    }
+    
+    public List<Employee> getEmployeesByPaging(Integer start,Integer end){
+    	System.out.println("getEmployeesByPaging Invoked for Starting " + start + " Ending "+ end);
+    	return employeeRepository.findEmployeesByRange(start-1, end);
+    }
 
 }

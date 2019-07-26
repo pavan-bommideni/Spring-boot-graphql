@@ -30,6 +30,8 @@ employees: [Employee]
 employee(id: Int) : Employee
 employeeByEmail(email:String):[Employee]
 employeesCount: Long
+employeesByPinCode(pincode:String): [Employee]
+employeesByPaging(start:Int,end:Int):[Employee]
 }
 
 type Mutation{

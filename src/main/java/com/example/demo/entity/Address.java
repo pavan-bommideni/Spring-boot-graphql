@@ -2,6 +2,8 @@ package com.example.demo.entity;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 @Table(name = "Address")
 public class Address {
@@ -13,6 +15,7 @@ public class Address {
     private String country;
     private String pincode;
     @OneToOne(mappedBy = "address")
+    @JsonBackReference
     private Employee employee;
 
     public Address() {

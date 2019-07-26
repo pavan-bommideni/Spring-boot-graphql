@@ -2,6 +2,9 @@ package com.example.demo.entity;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+
 @Entity
 @Table(name = "Employee")
 public class Employee {
@@ -10,6 +13,7 @@ public class Employee {
 	private int id;
 	private String name;
 	private String emailAddress;
+	@JsonManagedReference
 	@OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
 	@JoinColumn(name = "ADDRESS_ID")
 	private Address address;

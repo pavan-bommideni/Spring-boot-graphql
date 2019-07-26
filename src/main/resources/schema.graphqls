@@ -28,6 +28,8 @@ pincode: String
 type Query{
 employees: [Employee]
 employee(id: Int) : Employee
+employeeByEmail(email:String):[Employee]
+employeesCount: Long
 }
 
 type Mutation{

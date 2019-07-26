@@ -27,5 +27,15 @@ public class QueryResolver implements GraphQLQueryResolver {
     	System.out.println("getEmployee Invoked for id " + id);
     	return employeeRepository.findOne(id);
 	}
+    
+    public List<Employee> getEmployeeByEmail(String email) {
+    	System.out.println("getEmployeeByEmail Invoked for email " + email);
+    	return employeeRepository.findByEmailAddress(email);
+	}
+    
+    public Long getEmployeesCount() {
+    	System.out.println("getEmployeesCount Invoked");
+    	return employeeRepository.count();
+    }
 
 }

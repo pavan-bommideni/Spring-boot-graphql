@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 @RequestMapping("/api")
 public class EmployeeController {
-	
 	@Autowired
 	EmployeeRepository empRepository;
 	
@@ -24,6 +23,5 @@ public class EmployeeController {
 	public List<Employee> getEmp(){
 		return empRepository.findAll();
 	}
-	
-	
+
 }

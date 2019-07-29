@@ -1,5 +1,5 @@
 server:
-  port: 5000
+  port: 8080
 
 
 graphql:
@@ -14,3 +14,4 @@ spring:
     show-sql: true
   
 technolgies-service: http://localhost:7777/technologies
+

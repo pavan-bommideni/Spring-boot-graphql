@@ -14,6 +14,12 @@ emailAddress: String
 address: Address
 }
 
+type Technology {
+id: String
+technologyName: String
+skillset: [String]
+userId: Int
+}
 
 input EmployeeInfoModel {
 id: Int
@@ -32,6 +38,7 @@ employeeByEmail(email:String):[Employee]
 employeesCount: Long
 employeesByPinCode(pincode:String): [Employee]
 employeesByPaging(start:Int,end:Int):[Employee]
+technologies: [Technology]
 }
 
 type Mutation{

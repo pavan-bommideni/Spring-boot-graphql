@@ -8,3 +8,9 @@ graphql:
 
 graphiql:
   mapping: /graphiql
+  
+spring:
+  jpa:
+    show-sql: true
+  
+technolgies-service: http://localhost:7777/technologies

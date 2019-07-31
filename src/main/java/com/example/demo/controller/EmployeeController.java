@@ -22,6 +22,10 @@ public class EmployeeController {
 		return empRepository.findAll();
 	}
 	
+	@GetMapping("/test")
+	public String getTest() {
+		return "Cloud Run";
+	}
 	
 	
 	

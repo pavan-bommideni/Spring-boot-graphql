@@ -10,4 +10,4 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run', 'deploy', 'graphql', '--image', 'gcr.io/deft-landing-244816/spring:latest', '--cluster', 'standard-cluster-1', '--cluster-location', 'us-central1-a', '--platform', 'gke', '--namespace', 'default', '--quiet']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', '--image', 'gcr.io/deft-landing/244816/spring:latest', '--platform', 'managed']
+  args: ['beta', 'run', 'deploy', '--image', 'gcr.io/deft-landing-244816/spring:latest', '--platform', 'managed']

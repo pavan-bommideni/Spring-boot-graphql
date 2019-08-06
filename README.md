@@ -1,5 +1,5 @@
 # Spring-boot-graphql
-
+ 
 Project integrates GraphQl with Spring Boot Application.
 
 # Contents

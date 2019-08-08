@@ -56,7 +56,7 @@ public class QueryResolver implements GraphQLQueryResolver {
     
     public List<Employee> getEmployeesByPaging(Integer start,Integer end){
     	System.out.println("getEmployeesByPaging Invoked for Starting " + start + " Ending "+ end);
-    	return employeeRepository.findEmployeesByRange(start-1, end);
+    	return employeeRepository.findEmployeesByRange(start-1, (end+1)-start);
     }
     
     public List<Technology> getTechnologies(){
